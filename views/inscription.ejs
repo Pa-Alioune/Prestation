@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fr-FR">
+  <head>
+    <meta charset="utf-8" />
+
+    <title>Inscription</title>
+    <meta name="description" content="Figma htmlGenerator" />
+    <meta name="author" content="htmlGenerator" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Inter&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Cabin&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="/css/stylesInscription.css" />
+
+    <style>
+      /*
+                Figma Background for illustrative/preview purposes only.
+                You can remove this style tag with no consequence
+              */
+      body {
+        background: #e5e5e5;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="e101_34">
+      <div class="e101_47"></div>
+      <div class="e101_46"></div>
+      <span class="e105_52">Pour créer votre compte remplissez les champs ci-dessous</span>
+        <h1> <%= locals.notConform%> </h1>
+      <form action="/inscription" method="post">
+        <div class="e110_84">
+          <div class="e108_57">
+            <div class="e105_53"></div>
+            <span class="e108_55"
+              ><input
+                type="text"
+                placeholder="Entrer votre prenom"
+                value="<%= locals.prenom%>"
+                name="prenom"
+            /></span>
+          </div>
+          <div class="e108_58">
+            <div class="ei108_58_105_53"></div>
+            <span class="ei108_58_108_55"
+              ><input
+                type="text"
+                placeholder="Entrer votre nom de famille"
+                value="<%= locals.nom %>"
+                name="nom"
+            /></span>
+          </div>
+          <div class="e108_61">
+            <div class="ei108_61_105_53"></div>
+            <span class="ei108_61_108_55"
+              ><input
+                type="email"
+                placeholder="monadresse@email.com"
+                value="<%= locals.email%>"
+                name="email"
+            /></span>
+          </div>
+          <div class="e108_64">
+            <div class="ei108_64_105_53"></div>
+            <span class="ei108_64_108_55"
+              ><input
+                type="password"
+                placeholder="Mot de passe"
+                name="password"
+            /></span>
+          </div>
+          <div class="e108_67">
+            <div class="ei108_67_105_53"></div>
+            <span class="ei108_67_108_55"
+              ><input
+                type="password"
+                placeholder="Confirmer mot de passe"
+                name="confirmPassword"
+            /></span>
+          </div>
+        </div>
+        <div class="e109_75">
+            <span class="ei109_75_47_120"
+              ><button type="submit">Créer compte</button></span>
+          </div>
+      </form>
+      <div class="e110_85">
+        <span class="e108_71"
+          ><input type="checkbox" value="true" id="check" name="" /><label
+            for="check"
+            >J’ai lu et accepté les Conditions Générales et la politique de
+            confidentialité</label
+          >
+        </span>
+      </div>
+      <span class="e109_77"><a href="">possede deja un compte</a> </span>
+      <span class="e103_48">Creer votre compte</span>
+      <div class="e175_217">
+        <div class="e175_216"></div>
+        <span class="e110_78">Bienvenue sur Prestasen</span>
+        <div class="e105_49"></div>
+      </div>
+    </div>
+  </body>
+</html>
