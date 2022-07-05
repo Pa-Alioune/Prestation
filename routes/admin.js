@@ -7,3 +7,4 @@ const domaine = require('../controllers/admin/Domaine')
 router.get("/",dashboard.home)
 router.get("/domaine/ajouter",domaine.create)
 module.exports = router;
+

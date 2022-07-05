@@ -38,6 +38,7 @@ app.use(require("./Middlewares/flash.js"))
 
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
+
 const auth=require('./Middlewares/auth')
 const invite=require('./Middlewares/invite')
 //Router
@@ -51,7 +52,7 @@ app.get('/', homeController.showIndex)
 app.get('/inscription', inscriptionController.showInscriptionPage);
 app.post('/inscription', inscriptionController.createUser);
 
-var admin = require('./routes/admin');
+let admin = require('./routes/admin');
  app.use("/admin",admin)
 app.listen(app.get('port'),()=> console.log(`Le serveur est entrain d'écouter sur http://localhost:${app.get('port')}`))
 
