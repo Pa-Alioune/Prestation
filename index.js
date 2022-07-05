@@ -38,8 +38,8 @@ app.use(require("./Middlewares/flash.js"))
 
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
-auth=require('./Middlewares/auth')
-invite=require('./Middlewares/invite')
+const auth=require('./Middlewares/auth')
+const invite=require('./Middlewares/invite')
 //Router
 // db.utilisateur.create({nom:"laye",prenom:"ndiaye",password:"passer1234",email:"laye@esp.sn",role:"user"})
 app.get('/login', invite,Login.index )
