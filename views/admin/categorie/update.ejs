@@ -1,0 +1,14 @@
+<form action="/admin/categorie/modifier/<%= categorie.id %>" method="post">
+    <input type="text" value="<%= categorie.nom %> " name="name"/>
+    <select name="idDomaine" id="">
+        <% domaines.forEach(domaine => { %>
+            <% if(domaine.id == categorie.DomaineId) { %> 
+                <option selected value="<%= domaine.id %>"><%= domaine.nom %></option>
+            <% } else { %>
+                <option value="<%= domaine.id %>"><%= domaine.nom %></option>
+            <% } %> 
+        <%  });  %>
+    </select>
+    <textarea name="description" cols="30" rows="10"><%= categorie.description %> </textarea>
+    <input type="submit" value="soumettre">
+</form>

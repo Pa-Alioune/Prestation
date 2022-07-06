@@ -1,0 +1,14 @@
+<ul>
+
+    <% domaines.forEach(domaine => { %>
+        
+        <li>
+            <a href="/admin/domaine/modifier/<%=domaine.id%>">
+                <%= domaine.nom %>
+            </a>
+            <form action="/admin/domaine/delete/<%=domaine.id%>" method="post">
+                <button type="submit">suprimer</button>
+            </form>
+        </li>
+            <%  });  %>
+</ul>

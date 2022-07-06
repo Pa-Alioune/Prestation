@@ -1,0 +1,6 @@
+
+<form action="/admin/domaine/modifier/<%= domain.id %>" method="post">
+    <input type="text" value="<%= domain.nom %>" name="name"/>
+    <textarea name="description" cols="30" rows="10"><%= domain.description %></textarea>
+    <input type="submit" value="soumettre">
+</form>

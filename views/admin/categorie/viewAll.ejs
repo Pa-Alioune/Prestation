@@ -1,0 +1,12 @@
+<ul>
+    <% categories.forEach(categorie => { %>
+        <li>
+            <a href="/admin/categorie/modifier/<%=categorie.id%>">
+                <%= categorie.nom %>
+            </a>        
+        </li>
+        <form action="/admin/categorie/delete/<%=categorie.id%>" method="post">
+            <button type="submit">suprimer</button>
+        </form>
+    <%  });  %>
+</ul>

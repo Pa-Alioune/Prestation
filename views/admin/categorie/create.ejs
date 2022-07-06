@@ -1,0 +1,10 @@
+<form action="/admin/categorie/ajouter" method="post">
+    <input type="text" name="name"/>
+    <select name="idDomaine" id="">
+        <% domaines.forEach(domaine => { %>
+            <option value="<%= domaine.id %>"><%= domaine.nom %></option>
+        <%  });  %>
+    </select>
+    <textarea name="description" cols="30" rows="10"></textarea>
+    <input type="submit" value="soumettre">
+</form>

@@ -13,6 +13,8 @@ const dashboard = require('./controllers/DashboardController')
 const homeController = require('./controllers/homeController');
 const errorController = require('./controllers/errorController');
 const inscriptionController = require('./controllers/inscriptionController');
+const domaineController = require('./controllers/DomaineController');
+const CategorieController = require('./controllers/CategorieController');
 
 const app = express();
 
@@ -22,7 +24,7 @@ app.set('port', process.env.PORT || 3000);
 // Moteur de template
 app.set('view engine', 'ejs');
 //Cration ou modification des tables de la base de données
-db.sequelize.sync({alter: true});
+// db.sequelize.sync({alter: true});
 
 // Middleware
 // app.use(layouts);
@@ -51,7 +53,10 @@ app.get('/', homeController.showIndex)
 app.get('/inscription', inscriptionController.showInscriptionPage);
 app.post('/inscription', inscriptionController.createUser);
 
+
 var admin = require('./routes/admin');
- app.use("/admin",admin)
+app.use("/admin",admin)
+app.get("/domaine/all",domaineController.showAll)
+app.get("/categorie/all",CategorieController.showAll)
 app.listen(app.get('port'),()=> console.log(`Le serveur est entrain d'écouter sur http://localhost:${app.get('port')}`))
 
